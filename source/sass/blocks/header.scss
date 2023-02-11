@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 16px 0;
+  border-bottom: 2px solid $color-ronchi;
+  background-color: $color-default-white;
+
+  @include vp-1023 {
+    padding: 14px 0;
+  }
+
+  @include vp-767 {
+    padding: 8px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    flex-grow: 1;
+
+    @include vp-767 {
+      img {
+        width: 34px;
+        height: 35px;
+      }
+    }
+
+    a {
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.8;
+        transition: opacity $trans-default;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__button-icon {
+    display: none;
+
+    &.is-active {
+      display: block;
+      color: $color-harmonies;
+      transition: color $trans-default;
+
+      @include hover-focus {
+        transition: color $trans-default;
+        color: $color-cadet-blue;
+      }
+    }
+  }
+}

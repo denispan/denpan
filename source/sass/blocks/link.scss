@@ -1,0 +1,15 @@
+.link {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  transition: color $trans-default;
+  cursor: pointer;
+
+  @include hover-focus {
+    color: $color-cadet-blue;
+    transition: color $trans-default;
+  }
+}
